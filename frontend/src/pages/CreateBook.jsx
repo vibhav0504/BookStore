@@ -17,7 +17,7 @@ const createBook = () => {
       publishYear,
     };
     setLoading(true);
-    axios.post('http://localhost:4000/books/create',data)
+    axios.post('https://book-store-backend-lovat-gamma.vercel.app/books/create',data)
     .then(()=>{
       setLoading(false)
       navigate("/")

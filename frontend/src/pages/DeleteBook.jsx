@@ -11,7 +11,7 @@ const deleteBook = () => {
   const navigate=useNavigate()
   const handleDeleteBook=()=>{
     setLoading(true)
-    axios.delete(`http://localhost:4000/books/${id}`)
+    axios.delete(`https://book-store-backend-lovat-gamma.vercel.app/books/${id}`)
     .then(()=>{
       setLoading(false);
       navigate("/")

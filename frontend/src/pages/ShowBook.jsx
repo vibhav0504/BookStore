@@ -10,7 +10,7 @@ const showBook = () => {
   try {
     useEffect(()=>{
   setLoading(true);
-  axios.get(`http://localhost:4000/books/${id}`)
+  axios.get(`https://book-store-backend-lovat-gamma.vercel.app/books/${id}`)
   .then((res)=>{
     setBook(res.data);
     setLoading(false);
