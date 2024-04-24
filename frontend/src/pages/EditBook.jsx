@@ -13,7 +13,7 @@ const editBook = () => {
   const{id}=useParams();
   useEffect(()=>{
     setLoading(true);
-    axios.get(`http://localhost:5000/books/${id}`)
+    axios.get(`https://bookstore-bo8t.onrender.com/books/${id}`)
     .then((res)=>{
       setTitle(res.data.title)
       setAuthor(res.data.author)
@@ -32,7 +32,7 @@ const editBook = () => {
       publishYear,
     };
     setLoading(true);
-   axios.put(`http://localhost:5000/books/${id}`,data)
+   axios.put(`https://bookstore-bo8t.onrender.com/books/${id}`,data)
     .then(()=>{
       setLoading(false)
       navigate("/")

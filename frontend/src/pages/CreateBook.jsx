@@ -17,7 +17,7 @@ const createBook = () => {
       publishYear,
     };
     setLoading(true);
-    axios.post('http://localhost:5000/books/create',data)
+    axios.post('https://bookstore-bo8t.onrender.com/books/create',data)
     .then(()=>{
       setLoading(false)
       navigate("/")
