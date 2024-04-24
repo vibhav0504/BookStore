@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.json())
 mongoose.connect( process.env.CONNECTION_URL )
 .then(()=>{
-    // console.log("Database connected Successfully")
+    console.log("Database connected Successfully")
     app.listen(process.env.PORT,()=>{
         console.log(`App is running at port ${process.env.PORT}`)
     })

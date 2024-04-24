@@ -13,7 +13,7 @@ const editBook = () => {
   const{id}=useParams();
   useEffect(()=>{
     setLoading(true);
-    axios.get(`https://book-store-backend-lovat-gamma.vercel.app/books/${id}`)
+    axios.get(`http://localhost:5000/books/${id}`)
     .then((res)=>{
       setTitle(res.data.title)
       setAuthor(res.data.author)
@@ -32,7 +32,7 @@ const editBook = () => {
       publishYear,
     };
     setLoading(true);
-   axios.put(`https://book-store-backend-lovat-gamma.vercel.app/books/${id}`,data)
+   axios.put(`http://localhost:5000/books/${id}`,data)
     .then(()=>{
       setLoading(false)
       navigate("/")

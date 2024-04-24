@@ -11,7 +11,7 @@ const Home = () => {
   const[loading,setLoading]=useState(false)
   useEffect(()=>{
     setLoading(true)
-    axios.get('https://book-store-backend-lovat-gamma.vercel.app/books').then((Response)=>{
+    axios.get('http://localhost:5000/books').then((Response)=>{
       setBooks(Response.data)
       setLoading(false)
     }).catch((error)=>{

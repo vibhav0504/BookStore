@@ -11,14 +11,14 @@ const deleteBook = () => {
   const navigate=useNavigate()
   const handleDeleteBook=()=>{
     setLoading(true)
-    axios.delete(`https://book-store-backend-lovat-gamma.vercel.app/books/${id}`)
+    axios.delete(`http://localhost:5000/books/${id}`)
     .then(()=>{
       setLoading(false);
       navigate("/")
     }).catch((error)=>{
       setLoading(false);
       alert(" Please Check Console, there is some error")
-      // console.log(error)
+      console.log(error)
     })
   }
   return (
