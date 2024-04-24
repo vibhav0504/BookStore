@@ -4,7 +4,7 @@ import "dotenv/config"
 import router  from "./router/book.router.js";
 import cors from "cors"
 const app=express();
-app.use(cors())
+app.use(cors(credentials:true))
 // allowed to all
 // app.use(cors({
 //     origin:"http://localhost:5173/",
